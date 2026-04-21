@@ -1,0 +1,15 @@
+.carousel-wrapper {
+  max-width: 100%;     /* larghezza del rettangolo */
+  margin: 0 auto;
+}
+
+.carousel-item {
+  height: 500px;        /* altezza del carousel */
+  background-color: #222529; /* sfondo (nero o grigio scuro consigliato) */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* 🔥 MOSTRA TUTTA L’IMMAGINE */
+}

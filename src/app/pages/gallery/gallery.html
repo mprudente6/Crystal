@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <div class="row g-3">
+
+    
+  <div class="col-6 col-md-4" *ngFor="let img of images; let i = index">
+    <div class="square-wrapper" (click)="open(i)">
+      <img [src]="img" class="square-img" />
+    </div>
+  </div>
+
+
+  </div>
+</div>
+
+<div class="modal fade" id="lightbox-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+    <div class="modal-content bg-black">
+
+      <!-- CHIUDI -->
+      <button
+        type="button"
+        class="btn-close btn-close-white ms-auto m-3"
+        data-bs-dismiss="modal">
+      </button>
+
+      <!-- FRECCE -->
+      <button class="nav-arrow nav-arrow-left" (click)="prev()">
+        &#10094;
+      </button>
+
+      <button class="nav-arrow nav-arrow-right" (click)="next()">
+        &#10095;
+      </button>
+
+      <!-- IMMAGINE -->
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <img
+          [src]="images[currentIndex]"
+          class="img-fluid"
+          style="max-height: 90vh;"
+        />
+      </div>
+
+    </div>
+  </div>
+</div>

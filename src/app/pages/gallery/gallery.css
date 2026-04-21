@@ -1,0 +1,45 @@
+.square-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.square-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* riempie il quadrato */
+  transition: transform 0.3s ease;
+}
+
+.square-wrapper:hover .square-img {
+  transform: scale(1.05);
+}
+
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1056; /* sopra al modal */
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 4rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-arrow-left {
+  left: 20px;
+}
+
+.nav-arrow-right {
+  right: 20px;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
