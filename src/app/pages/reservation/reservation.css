@@ -1,0 +1,33 @@
+.cta-button {
+  display: inline-block;
+
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+
+  background-color: #ffffff;
+  color: #111111;
+
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #111111;
+  }
+}
+
+
+#paybutton {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

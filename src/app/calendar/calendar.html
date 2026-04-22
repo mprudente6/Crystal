@@ -1,0 +1,24 @@
+<div class="calendar">
+  <div class="calendar-header">
+    <button (click)="prevMonth()">‹</button>
+    <h3>{{ currentMonth | date: 'MMMM yyyy' }}</h3>
+    <button (click)="nextMonth()">›</button>
+  </div>
+
+  
+<div class="calendar-grid">
+  
+<div
+  class="day"
+  *ngFor="let day of days"
+  [class.booked]="day.booked"
+  [class.past]="isPast(day)"
+  [class.selected]="day.date === selectedDate"
+  (click)="selectDate(day)"
+>
+  {{ day.label }}
+</div>
+
+</div>
+
+</div>

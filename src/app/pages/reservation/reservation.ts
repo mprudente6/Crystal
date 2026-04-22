@@ -1,10 +1,11 @@
 import { Component,AfterViewInit  } from '@angular/core';
 import { loadStripe } from '@stripe/stripe-js';
+import { Calendar } from '../../calendar/calendar';
 
 @Component({
   standalone: true,
   selector: 'app-reservation',
-  imports: [],
+  imports: [Calendar],
   templateUrl: './reservation.html',
   styleUrl: './reservation.css',
 })

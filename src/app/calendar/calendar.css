@@ -1,0 +1,83 @@
+.calendar {
+  max-width: 420px;
+  margin: auto;
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 16px;
+  color: #fff;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+}
+
+.day-name {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.day {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.day.booked {
+  background: #444;
+  color: #777;
+  text-decoration: line-through;
+}
+
+/* celle vuote */
+.day.empty {
+  background: transparent;
+}
+
+
+.day.selected {
+  background: linear-gradient(
+    135deg,
+    #d4af37,
+    #f5d76e
+  );
+  color: #111;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+
+.day:not(.booked):not(.selected):hover {
+  background: #333;
+}
+
+
+.day.past {
+  background: #1a1a1a;
+  color: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
